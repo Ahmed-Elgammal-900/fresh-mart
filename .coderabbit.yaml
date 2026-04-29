@@ -1,0 +1,60 @@
+language: 'en-US'
+tone_instructions: 'You are an expert Next.js and TypeScript code reviewer. Be concise and clear.'
+
+reviews:
+    profile: 'chill'
+    request_changes_workflow: false
+    high_level_summary: true
+    poem: false
+    review_status: true
+    collapse_walkthrough: false
+    auto_review:
+        enabled: true
+        drafts: false
+        base_branches:
+            - 'main'
+            - 'dev'
+
+    path_instructions:
+        - path: 'app/**'
+          instructions: |
+              Server and Client Components. Check:
+                - Default to Server Components — flag unnecessary 'use client'
+                - Loading and error states handled for async operations
+                - No sensitive data passed to client components
+                - Images use next/image, links use next/link
+
+        - path: 'components/**'
+          instructions: |
+              Reusable UI components. Check:
+                - All props have TypeScript types defined
+                - No business logic inside UI components
+                - Accessible — buttons have labels, images have alt text
+
+        - path: 'hooks/**'
+          instructions: |
+              Check for proper cleanup in useEffect.
+              Ensure hooks follow Rules of Hooks.
+              Flag any memory leaks.
+
+        - path: 'lib/**'
+          instructions: |
+              Core utility and DB layer. Check:
+                - Explicit TypeScript return types on all functions
+                - Parameterized sql queries only — no string interpolation
+                - try/catch on every DB call with meaningful error messages
+                - Null/undefined guards before accessing query results
+                - No raw user input passed directly to queries
+
+        - path: 'store/**'
+          instructions: |
+              This is the global client state layer using Zustand in a Next.js
+
+    tools:
+        eslint:
+            enabled: true
+        github-checks:
+            enabled: true
+
+chat:
+    auto_reply: true
