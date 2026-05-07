@@ -10,16 +10,16 @@ export const deliverySchema = z.object({
 });
 
 export const cardSchema = z.object({
-    cardNumber: z.string().regex(/^[\d\s]{19}$/, 'Enter a valid 16-digit number'),
+    cardNumber: z
+        .string()
+        .regex(/^[\d\s]{19}$/, 'Enter a valid 16-digit number'),
     cardName: z.string().min(3, 'Cardholder name is too short'),
     expiry: z
         .string()
         .regex(/^(0[1-9]|1[0-2])\/\d{2}$/, 'Use MM/YY format')
         .refine((val) => {
             const [m, y] = val.split('/');
-            return (
-                new Date(2000 + parseInt(y), parseInt(m) - 1, 1) >= new Date()
-            );
+            return new Date(2000 + parseInt(y), parseInt(m), 1) > new Date();
         }, 'Card is expired'),
     cvv: z.string().regex(/^\d{3,4}$/, 'Enter 3 or 4 digits'),
 });

@@ -64,6 +64,12 @@ export function useFormValidation<T extends Record<string, string>>(
         return false;
     }, [schema, fields]);
 
+    const reset = useCallback(() => {
+        setFields(initial);
+        setErrors({});
+        setTouched({});
+    }, [initial]);
+
     return {
         fields,
         setFields,
@@ -72,5 +78,6 @@ export function useFormValidation<T extends Record<string, string>>(
         handleBlur,
         validateAll,
         setErrors,
+        reset
     };
 }

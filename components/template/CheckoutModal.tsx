@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import useCartStore from '@/store/useCartStore';
 import { useFormValidation } from '@/hooks/useFormValidation';
 import {
@@ -21,6 +21,17 @@ export default function CheckoutModal() {
     const [step, setStep] = useState<Step>(1);
     const [tab, setTab] = useState<PaymentTab>('card');
     const [loading, setLoading] = useState(false);
+    const orderTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+    const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+    const clearTimers = () => {
+        if (orderTimerRef.current) clearTimeout(orderTimerRef.current);
+        if (closeTimerRef.current) clearTimeout(closeTimerRef.current);
+        orderTimerRef.current = null;
+        closeTimerRef.current = null;
+    };
+
+    useEffect(() => clearTimers, []);
 
     const delivery = useFormValidation(deliverySchema, {
         firstName: '',
@@ -54,7 +65,8 @@ export default function CheckoutModal() {
 
     const placeOrder = () => {
         setLoading(true);
-        setTimeout(() => {
+        clearTimers();
+        orderTimerRef.current = setTimeout(() => {
             setLoading(false);
             setStep(4);
             clearCart();
@@ -63,8 +75,9 @@ export default function CheckoutModal() {
     };
 
     const handleClose = () => {
+        clearTimers();
         toggleModal();
-        setTimeout(() => {
+        closeTimerRef.current = setTimeout(() => {
             setStep(1);
             setTab('card');
             setLoading(false);
@@ -73,24 +86,9 @@ export default function CheckoutModal() {
     };
 
     const clearFields = () => {
-        delivery.setFields({
-            firstName: '',
-            lastName: '',
-            address: '',
-            city: '',
-            postal: '',
-            phone: '',
-        });
-        delivery.setErrors({});
-        card.setFields({
-            cardNumber: '',
-            cardName: '',
-            expiry: '',
-            cvv: '',
-        });
-        card.setErrors({});
-        wallet.setFields({ wallet: '' });
-        wallet.setErrors({});
+        delivery.reset();
+        card.reset();
+        wallet.reset();
     };
 
     if (!isModalOpen) return null;

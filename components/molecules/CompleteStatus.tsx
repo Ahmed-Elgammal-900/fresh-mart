@@ -20,9 +20,7 @@ export default function CompleteStatus({ handleClose }: CompleteStatusProps) {
                 SMS confirmation sent to your phone.
             </div>
             <button
-                onClick={() => {
-                    handleClose();
-                }}
+                onClick={handleClose}
                 className="w-full bg-green-700 hover:bg-green-800 text-white rounded-xl py-3 text-sm font-medium transition-colors"
             >
                 Done

@@ -1,8 +1,10 @@
+import type { InputHTMLAttributes } from 'react';
+
 export default function Input({
     id,
     error,
     ...props
-}: React.InputHTMLAttributes<HTMLInputElement> & { error?: string }) {
+}: InputHTMLAttributes<HTMLInputElement> & { error?: string }) {
     return (
         <input
             id={id}

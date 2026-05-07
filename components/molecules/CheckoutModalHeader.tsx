@@ -11,7 +11,7 @@ export default function CheckoutModalHeader({
                 <ShoppingCart size={17} className="text-green-700" />
                 <span className="font-medium text-gray-800">Checkout</span>
             </div>
-            <button onClick={handleClose}>
+            <button onClick={handleClose} aria-label="Close checkout">
                 <X size={17} className="text-gray-400 hover:text-gray-600" />
             </button>
         </div>
