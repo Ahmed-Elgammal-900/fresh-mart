@@ -1,13 +1,11 @@
 'use client';
-import { createContext, useRef } from 'react';
+import { createContext, useRef, type RefObject, type ReactNode } from 'react';
 
-export const CartRefContext = createContext<
-    React.RefObject<HTMLDivElement | null>
->({
+export const CartRefContext = createContext<RefObject<HTMLDivElement | null>>({
     current: null,
 });
 
-export function CartRefProvider({ children }: { children: React.ReactNode }) {
+export function CartRefProvider({ children }: { children: ReactNode }) {
     const cartRef = useRef<HTMLDivElement | null>(null);
 
     return (

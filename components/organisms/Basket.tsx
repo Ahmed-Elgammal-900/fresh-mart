@@ -21,6 +21,7 @@ export default function Basket() {
             />
 
             <span
+                aria-label={`${totalItems} item${totalItems !== 1 ? 's' : ''} in cart`}
                 className="absolute translate-x-1/2 top-[65.5%] right-1/2 translate-0.5 bg-red-600 text-white
                            text-lg rounded-full size-12 flex items-center
                            justify-center font-medium p-2"

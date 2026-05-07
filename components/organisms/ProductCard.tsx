@@ -18,7 +18,7 @@ export default function ProductCard({ id, name, price, image }: Product) {
     });
     return (
         <div
-            className="size-40 select-none relative transistion-transform rounded-lg p-5 border flex flex-col items-center hover:cursor-grab active:cursor-grabbing bg-amber-600"
+            className="size-40 select-none relative transition-transform rounded-lg p-5 border flex flex-col items-center hover:cursor-grab active:cursor-grabbing bg-amber-600"
             onMouseDown={(e) => onMouseDown(e, { id, name, price, image })}
             onTouchStart={(e) => onTouchStart(e, { id, name, price, image })}
             draggable="false"

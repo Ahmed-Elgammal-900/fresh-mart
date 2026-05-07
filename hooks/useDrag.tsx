@@ -20,6 +20,7 @@ export function useDragToCart(
             clientY: number,
             product: Product
         ) => {
+            cleanupRef.current?.();
             const rect = origin.getBoundingClientRect();
 
             const ghost = origin.cloneNode(true) as HTMLElement;

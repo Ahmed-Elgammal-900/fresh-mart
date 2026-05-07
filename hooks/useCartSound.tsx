@@ -30,6 +30,9 @@ export function useCartSound() {
 
         chime.start(ctx.currentTime + 0.04);
         chime.stop(ctx.currentTime + 0.3);
+        chime.onended = () => {
+            ctx.close();
+        };
     }, []);
 
     return { play };
