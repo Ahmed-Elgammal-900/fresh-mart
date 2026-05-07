@@ -12,13 +12,12 @@ export type FormReturn<T extends Record<string, string>> = ReturnType<
     typeof useFormValidation<T>
 >;
 
-export interface CheckoutModalHeaderProps {
+export interface WithHandleClose {
     handleClose: () => void;
 }
 
-export interface CompleteStatusProps {
-    handleClose: () => void;
-}
+export type CheckoutModalHeaderProps = WithHandleClose;
+export type CompleteStatusProps = WithHandleClose;
 
 export interface DeliveryDetailsProps {
     submitStep1: () => void;
