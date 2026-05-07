@@ -16,6 +16,8 @@ export default function Basket() {
                 src="/shopping-basket.png"
                 alt="shopping-basket"
                 loading="eager"
+                width={400}
+                height={400}
             />
 
             <span
