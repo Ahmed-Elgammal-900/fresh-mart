@@ -1,3 +1,4 @@
+'use client';
 import useCartStore from '@/store/useCartStore';
 import { ShoppingCart } from 'lucide-react';
 import CartItem from './CartItem';
@@ -16,12 +17,7 @@ export default function CartBody() {
                     <p>Your cart is empty</p>
                 </div>
             ) : (
-                items.map(({ id, name, price, quantity, image }) => (
-                    <CartItem
-                        key={id}
-                        {...{ id, name, price, quantity, image }}
-                    />
-                ))
+                items.map((item) => <CartItem key={item.id} {...item} />)
             )}
         </div>
     );

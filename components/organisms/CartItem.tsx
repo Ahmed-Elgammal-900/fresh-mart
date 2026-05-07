@@ -1,3 +1,4 @@
+'use client';
 import useCartStore from '@/store/useCartStore';
 import { Minus, Plus, Trash2 } from 'lucide-react';
 import Image from 'next/image';
@@ -13,7 +14,6 @@ export default function CartItem({
     const { removeItem, updateQty } = useCartStore();
     return (
         <div
-            key={id}
             className="flex items-center gap-3 p-3 rounded-xl
                            border border-gray-100 bg-gray-50"
         >
@@ -42,6 +42,7 @@ export default function CartItem({
             <div className="flex items-center gap-2 shrink-0">
                 <button
                     onClick={() => updateQty(id, quantity - 1)}
+                    aria-label="Decrease quantity"
                     className="w-7 h-7 rounded-full border border-gray-200
                                flex items-center justify-center
                                hover:bg-gray-100 transition-colors text-gray-800 hover:cursor-pointer"
@@ -55,6 +56,7 @@ export default function CartItem({
 
                 <button
                     onClick={() => updateQty(id, quantity + 1)}
+                    aria-label="Increase quantity"
                     className="w-7 h-7 rounded-full border border-gray-200
                                flex items-center justify-center
                                hover:bg-gray-100 transition-colors text-gray-800 hover:cursor-pointer"
@@ -64,6 +66,7 @@ export default function CartItem({
 
                 <button
                     onClick={() => removeItem(id)}
+                    aria-label="Remove item"
                     className="ml-1 text-red-500 hover:text-red-600
                                transition-colors hover:cursor-pointer"
                 >

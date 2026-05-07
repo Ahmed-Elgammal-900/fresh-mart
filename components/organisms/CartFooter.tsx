@@ -1,3 +1,4 @@
+'use client';
 import useCartStore from '@/store/useCartStore';
 
 export default function CartFooter() {
@@ -8,10 +9,6 @@ export default function CartFooter() {
     );
     return (
         <div className="p-4 border-t space-y-3">
-            <div className="flex justify-between text-sm text-gray-600">
-                <span>Subtotal</span>
-                <span>${total.toFixed(2)}</span>
-            </div>
             <div className="flex justify-between font-medium text-base">
                 <span className="text-gray-800">Total</span>
                 <span className="text-green-600">${total.toFixed(2)}</span>

@@ -1,3 +1,4 @@
+'use client';
 import useCartStore from '@/store/useCartStore';
 import { ShoppingCart, X } from 'lucide-react';
 
@@ -20,6 +21,7 @@ export default function CartHeader() {
             </div>
             <button
                 onClick={toggleCart}
+                aria-label="Close cart"
                 className="group hover:cursor-pointer hover:bg-green-600 text-white p-2 rounded-full"
             >
                 <X size={20} className="text-gray-600 group-hover:text-white" />
