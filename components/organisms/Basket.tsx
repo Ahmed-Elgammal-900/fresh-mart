@@ -1,6 +1,5 @@
 'use client';
 import Image from 'next/image';
-import ShoppingBasket from '@/public/shopping-basket.png';
 import useCartStore from '@/store/useCartStore';
 import { useCartRef } from '@/hooks/useCartRef';
 
@@ -14,7 +13,7 @@ export default function Basket() {
         <div ref={cartRef} className="relative">
             <Image
                 className="size-100"
-                src={ShoppingBasket}
+                src="/shopping-basket.png"
                 alt="shopping-basket"
                 loading="eager"
             />
