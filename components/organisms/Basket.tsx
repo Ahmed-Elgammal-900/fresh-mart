@@ -1,6 +1,6 @@
 'use client';
 import Image from 'next/image';
-import ShoppingBasket from '/public/shopping basket.png';
+import ShoppingBasket from '/public/shopping-basket.png';
 import useCartStore from '@/store/useCartStore';
 import { useCartRef } from '@/hooks/useCartRef';
 
