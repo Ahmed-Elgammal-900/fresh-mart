@@ -25,7 +25,6 @@ export default function Icon() {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="lucide lucide-shopping-cart-icon lucide-shopping-cart"
             >
                 <circle cx="8" cy="21" r="1" />
                 <circle cx="19" cy="21" r="1" />

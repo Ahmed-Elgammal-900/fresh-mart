@@ -32,8 +32,8 @@ export default function Error({
                 Something went wrong
             </h1>
             <p className="text-base leading-relaxed text-center max-w-sm mb-7">
-                The server hit an unexpected snag. It&apos;s on us — not you. We&apos;ve
-                been notified and are looking into it.
+                The server hit an unexpected snag. It&apos;s on us — not you.
+                Please try again or go back home.
             </p>
 
             <div className="flex gap-3">

@@ -8,7 +8,7 @@ export default function NotAllowedScreen() {
                     <Laptop className="size-9" />
                 </div>
                 <p className="text-green-900 font-semibold">
-                    App works only on large screen
+                    App works only on large screens
                 </p>
             </div>
         </div>
