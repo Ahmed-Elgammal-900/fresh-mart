@@ -1,7 +1,6 @@
 import { ImageResponse } from 'next/og';
 
 export const size = { width: 40, height: 40 };
-export const contentType = 'image/png';
 
 export default function Icon() {
     return new ImageResponse(
@@ -12,23 +11,25 @@ export default function Icon() {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                background: "black",
-                borderRadius: "100%"
+                background: '#00a63e',
+                borderRadius: '100%',
             }}
         >
             <svg
-                width="25"
-                height="25"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="white"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                className="lucide lucide-shopping-cart-icon lucide-shopping-cart"
             >
-                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
-                <path d="M3 6h18" />
-                <path d="M16 10a4 4 0 0 1-8 0" />
+                <circle cx="8" cy="21" r="1" />
+                <circle cx="19" cy="21" r="1" />
+                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
             </svg>
         </div>,
         { ...size }
