@@ -95,7 +95,7 @@ npm install
 ### Environment Variables
 
 ```bash
-cp .env
+touch .env
 ```
 
 | Variable       | Description            |
