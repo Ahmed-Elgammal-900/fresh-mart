@@ -39,7 +39,7 @@ export default function OrderSummary({
                 </div>
                 <div className="flex justify-between text-sm text-gray-500">
                     <span>Delivery</span>
-                    <span>${deliveryCost}</span>
+                    <span>${deliveryCost.toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between text-sm font-medium text-gray-800 pt-2 border-t">
                     <span>Total</span>

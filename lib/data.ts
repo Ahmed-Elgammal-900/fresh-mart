@@ -1,7 +1,12 @@
 import postgres from 'postgres';
 import { Product } from './definition';
 
-const sql = postgres(process.env.DATABASE_URL!, { ssl: 'require' });
+const databaseUrl = process.env.DATABASE_URL;
+if (!databaseUrl) {
+    throw new Error('DATABASE_URL is not set');
+}
+
+const sql = postgres(databaseUrl, { ssl: 'require' });
 
 export async function fetchProducts(): Promise<Product[]> {
     try {

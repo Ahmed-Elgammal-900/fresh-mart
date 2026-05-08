@@ -21,7 +21,7 @@ export default function CardForm() {
         return v.slice(0, 2) + '/' + v.slice(2, 4);
     };
 
-    const handleBackpace = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    const handleBackspace = (e: React.KeyboardEvent<HTMLInputElement>) => {
         if (e.key === 'Backspace') {
             const value = card.fields.expiry;
             if (value.endsWith('/') || value.length === 3) {
@@ -77,7 +77,7 @@ export default function CardForm() {
                             onBlur={(e) =>
                                 card.handleBlur('expiry', e.target.value)
                             }
-                            onKeyDown={handleBackpace}
+                            onKeyDown={handleBackspace}
                         />
                     </Field>
                 </div>

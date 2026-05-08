@@ -7,7 +7,7 @@ import {
     cardSchema,
     walletSchema,
 } from '@/validations/checkoutSchema';
-import DeliveryDetails from '../organisms/DelevieryDetails';
+import DeliveryDetails from '../organisms/DeliveryDetails';
 import PaymentMethod from '../organisms/PaymentMethod';
 import OrderSummary from '../organisms/OrderSummary';
 import CompleteStatus from '../molecules/CompleteStatus';

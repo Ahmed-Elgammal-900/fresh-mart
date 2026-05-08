@@ -23,7 +23,7 @@ export default function StepIndicator({ step }: StepIndicatorProps) {
                         >
                             {label}
                         </span>
-                        {index < 2 && (
+                        {index < stepLabels.length - 1 && (
                             <div className="flex-1 h-px bg-gray-200 mx-1" />
                         )}
                     </div>

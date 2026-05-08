@@ -88,7 +88,7 @@ flowchart TD
 
 ```bash
 git clone https://github.com/Ahmed-Elgammal-900/fresh-mart.git
-cd Quiz-App-Front-End
+cd fresh-mart
 npm install
 ```
 
