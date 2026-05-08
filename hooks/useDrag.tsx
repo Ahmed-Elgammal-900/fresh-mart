@@ -1,5 +1,4 @@
 'use client';
-
 import { Product } from '@/lib/definition';
 import { RefObject, useCallback, useEffect, useRef } from 'react';
 
