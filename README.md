@@ -13,10 +13,10 @@ Fresh Mart is a smart shopping app that saves users time on their regular grocer
 
 ## ✨ Features
 
-- 🛒 **Drag & drop** - add items to cart effortlessly
-- 📊 **Cart tracking** - live quantity & price updates
-- 📍 **Checkout** - delivery address input
-- 💳 **Payment options** - multiple methods to choose from
+- 🛒 **Drag & drop** — add items to cart effortlessly
+- 📊 **Cart tracking** — live quantity & price updates
+- 📍 **Checkout** — delivery address input
+- 💳 **Payment options** — multiple methods to choose from
 
 ## 🛠️ Key Features
 
