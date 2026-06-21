@@ -13,17 +13,17 @@ Fresh Mart is a smart shopping app that saves users time on their regular grocer
 
 ## ✨ Features
 
-- 🛒 **Drag & drop** — add items to cart effortlessly
-- 📊 **Cart tracking** — live quantity & price updates
-- 📍 **Checkout** — delivery address input
-- 💳 **Payment options** — multiple methods to choose from
+- 🛒 **Drag & drop:** add items to cart effortlessly
+- 📊 **Cart tracking:** live quantity & price updates
+- 📍 **Checkout:** delivery address input
+- 💳 **Payment options:** multiple methods to choose from
 
 ## 🛠️ Key Features
 
-- **Global State** — Optimized app state using Zustand
-- **Form Validation** — Using React Hook Form and Zod
-- **Atomic Design** — Component architecture for easy reuse across the project
-- **Grid Layout** — Established grid layout for product display and easy navigation
+- **Global State:** Optimized app state using Zustand
+- **Form Validation:** Using React Hook Form and Zod
+- **Atomic Design:** Component architecture for easy reuse across the project
+- **Grid Layout:** Established grid layout for product display and easy navigation
 
 ## ⚡ Technical Highlights
 
